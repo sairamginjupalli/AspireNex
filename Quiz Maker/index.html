@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Quiz Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Section -->
+        <div id="login-section" class="section">
+            <h1>Login</h1>
+            <form id="login-form" class="form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Admin Section -->
+        <div id="admin-section" class="section hidden">
+            <h1>Admin Panel</h1>
+            <button id="create-quiz-btn">Create Quiz</button>
+            <div id="create-quiz-form" class="hidden">
+                <h2>Create a Quiz</h2>
+                <div id="questions-container"></div>
+                <button type="button" id="add-question-btn">Add Question</button>
+                <button type="button" id="save-quiz-btn">Save Quiz</button>
+            </div>
+            <div id="allocate-quiz-form">
+                <h2>Allocate Quiz</h2>
+                <select id="quiz-select">
+                    <!-- Quiz options will be populated here -->
+                </select>
+                <input type="file" id="user-file" accept=".xlsx, .xls">
+                <button type="button" id="allocate-quiz-btn">Allocate Quiz</button>
+            </div>
+        </div>
+
+        <!-- User Section -->
+        <div id="user-section" class="section hidden">
+            <h1>Available Quizzes</h1>
+            <div id="quiz-list-container" class="card-container"></div>
+            <div id="quiz-container" class="hidden">
+                <form id="take-quiz-form">
+                    
+                </form>
+                <button type="button" id="submit-quiz-btn">Submit Quiz</button>
+
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result-section" class="section hidden">
+            <h1>Quiz Results</h1>
+            <div id="result-container" class="card-container"></div>
+            <button type="button" id="back-btn">Back to Quizzes</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
