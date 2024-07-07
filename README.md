@@ -8,8 +8,8 @@ It has two main roles: Admin and User.
 The app stores data locally and is designed to be easy to use on both computers and mobile devices.
 
 Deafult Admin Details :
-username : admin
-password : admin123
+- username : admin
+- password : admin123
 
 For Users : 
 username and password are whic they have provided in the Excel sheet.
